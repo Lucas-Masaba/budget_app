@@ -76,3 +76,6 @@ gem 'rubocop', '>= 1.0', '< 2.0'
 
 # Add devise
 gem 'devise'
+
+# Add cancancan
+gem 'cancancan'

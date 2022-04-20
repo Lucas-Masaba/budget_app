@@ -13,6 +13,8 @@ class CategoryTransactionsController < ApplicationController
   # GET /category_transactions/new
   def new
     @category_transaction = CategoryTransaction.new
+    @category_transaction.transaction_id = params[:transaction_id]
+    @categories = Category.all
   end
 
   # GET /category_transactions/1/edit
@@ -22,6 +24,8 @@ class CategoryTransactionsController < ApplicationController
   # POST /category_transactions or /category_transactions.json
   def create
     @category_transaction = CategoryTransaction.new(category_transaction_params)
+    @category_transaction.transaction_id = params[:transaction_id]
+    @category_transaction.category_id = params[:category_id]
 
     respond_to do |format|
       if @category_transaction.save

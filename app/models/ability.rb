@@ -4,6 +4,11 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
+    can :read, Recipe, public: true
+    return unless user.present?
+
+    can :manage, Recipe, user_id: user.id
+
     # Define abilities for the passed in user here. For example:
     #
     #   user ||= User.new # guest user (not logged in)

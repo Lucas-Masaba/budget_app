@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
+
+  unauthenticated do
+    root "users#index"
+  end
   resources :category_transactions
   # resources :transactions
   # resources :categories
@@ -11,5 +15,5 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "users#index"
-  root 'categories#index'
+  root 'categories#index', as: "home"
 end

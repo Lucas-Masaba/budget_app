@@ -1,11 +1,11 @@
-<div class = "position-relative">
-  <h1 class = "text-center m-5 text-muted">Home Budget App</h1>
-  <div class="sign-btn-wrapper text-center d-flex flex-column">
-    <button class = 'btn btn-primary m-1'>
-      <%= link_to "LOG IN", new_user_session_path, id: "loginBtn" , class:"btn btn-primary" %>
+<div class = "splash-screen-container">
+  <h1 class = "splash-heading">What's your Budget</h1>
+  <div class="splash-button-container">
+    <button class = 'login-btn'>
+      <%= link_to "LOG IN", new_user_session_path, class:"navlink-login" %>
     </button>
-    <button class = 'btn btn-primary m-1'>
-      <%= link_to "SIGN UP", new_user_registration_path, id: "signupBtn", class:"btn btn-primary" %>
+    <button class = 'signup-btn'>
+      <%= link_to "SIGN UP", new_user_registration_path, class:"navlink-signup" %>
     </button>
   </div>
 </div>

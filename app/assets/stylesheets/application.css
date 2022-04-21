@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ *= require font-awesome
  */
  @font-face {
   font-family: "Poppins Regular";
@@ -24,11 +25,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* position: relative; */
 }
 
 body {
   background: #f8f4f4;
-
+  /* position: relative; */
 }
 
 /*Splash screen*/
@@ -96,6 +98,7 @@ a {
 .form-container {
   display: flex;
   flex-direction: column;
+  padding: 2%;
 }
 
 .input-field {
@@ -107,4 +110,114 @@ a {
 
 .input-field::placeholder {
   font-size: 110%;
+}
+
+.navbar {
+  margin-bottom: 2%;
+}
+
+.signup-ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  list-style-type: none;
+  padding: 1%;
+  color: #fff;
+  background: #2596be;
+}
+
+.back-arrow {
+  color: #fff;
+  font-size: 120%;
+}
+
+.back-arrow:hover {
+  cursor: pointer;
+}
+
+.submit-signup {
+  border: none;
+  background: none;
+  color: #fff;
+  font-size: 110%;
+}
+
+.submit-signup:hover {
+  cursor: pointer;
+}
+
+.devise-shared-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #434b54;
+}
+
+.devise-shared-links a {
+  color: #434b54;
+}
+
+/*Transactions*/
+.card-ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  background: #fff;
+  border-radius: 4px;
+  margin: 5%;
+  padding: 2%;
+  position: relative;
+}
+
+.transaction-name {
+  color: #434b54;
+  font-size: 110%;
+
+}
+
+.transaction-date {
+  color: #434b54;
+  font-size: 80%;
+  
+}
+
+.transaction-amount {
+  font-weight: bold;
+  font-size: 110%;
+}
+
+.image-description-container {
+  display: flex;
+  
+}
+
+.icon-img {
+  padding-right: 5%;
+}
+
+.add-transaction {
+  position:absolute;
+  background:#68b424;
+  bottom: -100px;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+  margin-top: 500p;
+}
+
+.card-container {
+position: relative;
+}
+
+.transactions-container {
+  position: relative;
+}
+
+.none {
+  align-items: center;
+  font-weight: bold;
+  padding: 20%;
+  font-size: 120%;
 }

@@ -1,16 +1,40 @@
+<nav class='navbar'>
+  <ul class="signup-ul">
+    <li>
+      <a href="/categories" class="back-arrow"><i class="fa fa-arrow-left"></i></a>
+    </li>
+    <li>
+      <h2>CATEGORIES</h2>
+    </li>
+    <li class="actions">
+      <%= button_to "Sign Out", destroy_user_session_path, method: :delete, class: "submit-signup" %>
+    </li>
+  </ul>
+</nav>
 <p style="color: green"><%= notice %></p>
+<div id="card-container">
+ <% if @categories.any? %>
 
-<h1>Categories</h1>
-
-<div id="categories">
   <% @categories.each do |category| %>
-    <%= render category %>
-    <p>
-      <%= link_to "Show this category", category %>
-    </p>
+    <ul class="card-ul">
+      <div class="image-description-container">
+      <li class="card">
+        <img src="<%= category.icon %>" class="icon-img" alt="icon of <%= category.name %>", width="100px", height="80px" />
+      </li>
+      <li class="card">
+        <p class="transaction-name"><%= link_to category.name, category %></p><br>
+        <p class="transaction-date"><%= category.created_at.strftime("%d-%b-%Y")  %></p>
+      </li>
+      </div>
+      <li class="card">
+        <p class="transaction-amount">$<%= category.transactions.sum(:amount) %> </p>
+      </li>
+    </ul>
+
+      <%# <%= link_to "Show this category", category %>
   <% end %>
+  <% else %>
+  <p class="none">There Are No Categories. Please Add Category</p>
+  <% end %>
+<%= link_to "New category", new_category_path, class:"add-transaction" %>
 </div>
-
-
-
-<%= link_to "New category", new_category_path %>

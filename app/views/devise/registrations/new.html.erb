@@ -1,13 +1,18 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
   <nav class='navbar'>
-    <div>
-      <h2>Sign up</h2>
-    </div>
-    <div class="actions">
-      <%= f.submit "Sign up" %>
-    </div>
+    <ul class="signup-ul">
+      <li>
+        <a href="/users" class="back-arrow"><i class="fa fa-arrow-left"></i></a>
+      </li>
+      <li>
+        <h2>Sign up</h2>
+      </li>
+      <li class="actions">
+        <%= f.submit "Next", class: "submit-signup" %>
+      </li>
+    </ul>
   </nav>
+  <%= render "devise/shared/error_messages", resource: resource %>
   <div class="form-container">
     <div class="field">
       <%= f.text_field :name, placeholder: "Name", class: "input-field" %>

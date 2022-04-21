@@ -87,3 +87,5 @@ gem 'devise'
 gem 'cancancan'
 
 gem 'ffi'
+
+gem "font-awesome-rails"

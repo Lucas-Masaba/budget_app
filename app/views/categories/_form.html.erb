@@ -1,4 +1,17 @@
 <%= form_with(model: category) do |form| %>
+  <nav class='navbar'>
+    <ul class="signup-ul">
+      <li>
+        <a href="/categories" class="back-arrow"><i class="fa fa-arrow-left"></i></a>
+      </li>
+      <li>
+        <h2>New Category</h2>
+      </li>
+      <li class="actions">
+        <%= form.submit "Add", class: "submit-signup" %>
+      </li>
+    </ul>
+  </nav>
   <% if category.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(category.errors.count, "error") %> prohibited this category from being saved:</h2>
@@ -10,18 +23,15 @@
       </ul>
     </div>
   <% end %>
-
+<div class="form-container">
   <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+    
+    <%= form.text_field :name, placeholder: "Name", class: "input-field" %>
   </div>
 
-  <div>
-    <%= form.label :icon, style: "display: block" %>
-    <%= form.text_field :icon %>
+  <div>   
+    <%= form.text_field :icon, placeholder: "Enter URL", class: "input-field" %>
   </div>
 
-  <div>
-    <%= form.submit %>
-  </div>
+</div>
 <% end %>

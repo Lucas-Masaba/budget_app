@@ -1,4 +1,18 @@
 <%= form_with url: "/categories/#{@category.id}/transactions" do |form| %>
+    <nav class='navbar'>
+    <ul class="signup-ul">
+      <li>
+        <a href="/categories/:id" class="back-arrow"><i class="fa fa-arrow-left"></i></a>
+      </li>
+      <li>
+        <h2>New Transaction</h2>
+      </li>
+      <li class="actions">
+        <%= form.submit "Add", class: "submit-signup" %>
+      </li>
+    </ul>
+  </nav>
+  
   <% if transaction.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(transaction.errors.count, "error") %> prohibited this transaction from being saved:</h2>
@@ -12,15 +26,14 @@
   <% end %>
 
   <%= form.hidden_field :user_id, value: current_user.id %>
-  <div class="m-5 mb-3">
-    <%= form.text_field :name,required: true, class:"p-2 form-control", placeholder: "Name", id: "name"%><br>
+  <div class="field">
+    <%= form.text_field :name,required: true, class: "input-field", placeholder: "Name" %><br>
   </div>
-  <div class="m-5 mb-3">
-    <%=form.text_field :category, value:@category.name, class:"p-2 form-control"%><br>
+  <div class="field">
+    <%=form.text_field :category, value:@category.name, class: "input-field" %><br>
   </div>
-  <div class="m-5 mb-3">
-    <%= form.number_field :amount ,  class:"p-2 form-control" , required: true, placeholder: 'Amount',  min: 1, id:"amount"%><br>
+  <div class="field">
+    <%= form.number_field :amount ,  class:"p-2 form-control" , required: true, placeholder: 'Amount', class: "input-field", min: 1, id:"amount"%><br>
   </div>
-    <%= form.submit "Create Transaction", class:"btn btn-primary form-control" %>
 
 <% end %>

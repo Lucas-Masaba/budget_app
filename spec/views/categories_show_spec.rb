@@ -21,8 +21,8 @@ RSpec.describe 'Category index page', type: :feature do
     end
 
     it ' it redirects me to that posts show page' do
-      click_button "Sign Out"
-      expect(page).to have_current_path "/users"
+      click_button 'Sign Out'
+      expect(page).to have_current_path '/users'
     end
   end
 end

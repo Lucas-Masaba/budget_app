@@ -14,28 +14,28 @@
  *= require_self
  *= require font-awesome
  */
- @font-face {
+@font-face {
   font-family: "Poppins Regular";
   src: url('Poppins-Regular.ttf');
 }
 
-
- * {
+* {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
   /* position: relative; */
 }
 
 body {
   background: #f8f4f4;
+
   /* position: relative; */
 }
 
-/*Splash screen*/
+/* Splash screen */
 .splash-heading {
-
   position: absolute;
   top: 50%;
   left: 50%;
@@ -66,7 +66,6 @@ a {
 
 .login-btn:hover {
   cursor: pointer;
-
 }
 
 .signup-btn {
@@ -78,12 +77,11 @@ a {
   color: #fff;
 }
 
-
 .navlink-signup {
   color: #000;
 }
 
-/*signup*/
+/* signup */
 
 .form-container {
   display: flex;
@@ -147,7 +145,7 @@ a {
   color: #434b54;
 }
 
-/*Transactions*/
+/* Transactions */
 .card-ul {
   display: flex;
   justify-content: space-between;
@@ -163,13 +161,11 @@ a {
 .transaction-name {
   color: #434b54;
   font-size: 110%;
-
 }
 
 .transaction-date {
   color: #434b54;
   font-size: 80%;
-  
 }
 
 .transaction-amount {
@@ -179,7 +175,6 @@ a {
 
 .image-description-container {
   display: flex;
-  
 }
 
 .icon-img {
@@ -187,18 +182,17 @@ a {
 }
 
 .add-transaction {
-  position:absolute;
-  background:#68b424;
+  position: absolute;
+  background: #68b424;
   bottom: -100px;
   width: 100%;
   text-align: center;
   color: #fff;
   padding: 20px;
-  margin-top: 500p;
 }
 
 .card-container {
-position: relative;
+  position: relative;
 }
 
 .transactions-container {

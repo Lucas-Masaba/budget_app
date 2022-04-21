@@ -13,5 +13,4 @@ RSpec.describe User, type: :model do
   it 'subject should be valid' do
     expect(subject).to be_valid
   end
-
 end

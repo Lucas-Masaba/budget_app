@@ -22,8 +22,6 @@ class TransactionsController < ApplicationController
   # POST /transactions or /transactions.json
   def create
     @category = Category.find(params[:category_id])
-    # @transaction = Transaction.new(transaction_params)
-    # @transaction.user_id = current_user.id
     @transaction = @category.transactions.create(transaction_params)
 
     respond_to do |format|

@@ -4,5 +4,4 @@ class Transaction < ApplicationRecord
   belongs_to :user
 
   validates :name, presence: true
-  # validates :amount, numericality: { only_integer: true  }
 end
